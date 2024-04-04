@@ -1,0 +1,80 @@
+.inputpagecontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%; /* Ensure full viewport height */
+    background-color: #f8f8f8;
+    padding: 3rem;
+}
+/* Header styles */
+h1 {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    color: #262626;
+}
+
+/* Dropzone styles */
+ngx-dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #418dff;
+    padding: 2rem;
+    background-color: #b8b8b86b;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    width: 70%;
+}
+
+ngx-dropzone:hover {
+    border-color: #1e00ff;
+    background-color: #b8b8b82b;
+
+}
+
+ngx-dropzone-label {
+    font-size: 1.5rem;
+    color: #3a3a3a;
+    margin-bottom: 1rem;
+}
+
+/* app.component.css */
+.info-message {
+    color: red;
+    font-size: 14px;
+    /* Add more styles as needed */
+}
+
+
+/* Button styles */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-self: center;
+    margin-top: 5%;
+    border-radius: 10%;
+}
+
+button:hover {
+    background-color: #037dffcd;
+}
+
+/* Card preview styles */
+ngx-dropzone-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    font-size: 0.9rem;
+}

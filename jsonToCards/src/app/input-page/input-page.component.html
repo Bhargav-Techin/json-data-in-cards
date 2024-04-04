@@ -1,0 +1,15 @@
+<div class="inputpagecontainer">
+    <h1>JSON to Readable Cards Converter</h1>
+    <ngx-dropzone (change)="onSelect($event)">
+        <ngx-dropzone-label>Click or Drop here to upload a JSON file</ngx-dropzone-label>
+        <ngx-dropzone-preview [removable]="true" (removed)="onRemove($event)" *ngIf="selectedFile">
+            <ngx-dropzone-label>{{ selectedFile.name }} ({{ selectedFile.type }})</ngx-dropzone-label>
+        </ngx-dropzone-preview>
+    </ngx-dropzone>
+
+    <div id="info-container">
+        <p class="info-message">{{ infoMessage }}</p>
+    </div>
+    <button (click)="handleFileInput()"  *ngIf="selectedFile">Convert</button>
+</div>
+

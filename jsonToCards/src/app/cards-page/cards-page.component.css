@@ -1,0 +1,88 @@
+/* cards-page.component.css */
+
+/* Container for the filter section */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Input fields and select */
+input[type="text"],
+select {
+  flex-grow: 1; /* Allow these elements to grow equally */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 10px; /* Add some spacing between elements */
+}
+
+/* Checkbox label */
+label {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+/* cards-page.component.css */
+
+/* Container for the user cards */
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: space-between; /* Distribute cards evenly */
+  margin: 20px; /* Add some spacing around the container */
+}
+
+/* User cards */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Allow cards to grow equally */
+  /* min-width: 150px; */
+  flex: 1; /* Allow cards to grow equally */
+  min-width: 200px; /* Set a minimum width of 200px */
+  max-width: calc(
+    33.33% - 20px
+  ); /* Limit card width to one-third of the container */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* User avatar */
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* User details */
+.card h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Availability status */
+.card p.available {
+  color: #4caf50;
+}
+
+.card p.not-available {
+  color: #f44336;
+}

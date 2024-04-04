@@ -1,0 +1,39 @@
+<!-- cards-page.component.html -->
+<div class="container">
+  <input type="text" [(ngModel)]="searchText" placeholder="Search by name" />
+  <input
+    type="text"
+    [(ngModel)]="selectedDomain"
+    placeholder="Filter by domain"
+  />
+  <select [(ngModel)]="selectedGender">
+    <option value="">All Genders</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+  <label>
+    <input type="checkbox" [(ngModel)]="isAvailable" /> Show only available
+  </label>
+</div>
+
+<div class="card-container">
+  <div
+    class="card"
+    *ngFor="
+      let item of jsonData
+        | searchFilter
+          : searchText
+          : selectedDomain
+          : selectedGender
+          : isAvailable
+    "
+  >
+    <img [src]="item.avatar" alt="User Avatar" width="50" height="50" />
+    <h3>{{ item.first_name }} {{ item.last_name }}</h3>
+    <p>Email: {{ item.email }}</p>
+    <p>Gender: {{ item.gender }}</p>
+    <p>Domain: {{ item.domain }}</p>
+    <p *ngIf="!item.available">Not available</p>
+    <p *ngIf="item.available">Available</p>
+  </div>
+</div>
